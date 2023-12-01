@@ -27,7 +27,10 @@ nav a {
 
 /* Apply red background to all pages */
 body {
+    margin: 0;
+    padding: 0;
     background-color: #fc0e0e;
+    color: #ffff00;
 }
 
 .image-container {
@@ -44,4 +47,9 @@ body {
     width: 315px; /* Adjust the width of each image */
     border-radius: 8px; /* Optional: add border radius for rounded corners */
     cursor: pointer;
+}
+
+nav a.active {
+    color: #fc0e0e; /* Set the color for the active link */
+    /* Add any other styles to highlight the active link */
 }

@@ -11,7 +11,7 @@
         <nav>
             <!-- Image for the landing page, linked to the landing page -->
             <ul>
-                <li><a href="#"><img src="https://www.pizzalegacy.com/pizza.png" alt="Pizza" height="100"></a></li>
+                <li><a href="#"><img src="https://www.pizzalegacy.com/banner.png" alt="PizzaBanner" height="100"></a></li>
                 <li><a href="#" onclick="loadPage('info.html')">Info</a></li>
                 <li><a href="#" onclick="loadPage('tidigare.html')">Vinnare</a></li>
                 <li><a href="#" onclick="loadPage('reg.html')">Anmälan</a></li>
@@ -25,6 +25,7 @@
     </div>
 
     <script>
+            // Function to load a page and set it as active
         function loadPage(page) {
             // Use fetch to load the content of the selected page
             fetch(page)
@@ -32,7 +33,20 @@
                 .then(content => {
                     document.getElementById('content').innerHTML = content;
                 });
+
+            // Remove 'active' class from all links
+            document.querySelectorAll('nav ul li a').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Add 'active' class to the clicked link
+            event.target.classList.add('active');
         }
+
+        // Preload page1.html and set it as active when the page loads
+        window.addEventListener('load', function () {
+            loadPage('info.html');
+        });
     </script>
 </body>
 </html>
