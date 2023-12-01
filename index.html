@@ -11,7 +11,7 @@
         <nav>
             <!-- Image for the landing page, linked to the landing page -->
             <ul>
-                <li><a href="#"><img src="https://www.pizzalegacy.com/banner.png" alt="PizzaBanner" height="100"></a></li>
+                <li><a href="#" onclick="loadPage('landing.html')" class="active"><img src="https://www.pizzalegacy.com/banner.png" alt="PizzaBanner" class="logo" height="100"></a></li>
                 <li><a href="#" onclick="loadPage('info.html')">Info</a></li>
                 <li><a href="#" onclick="loadPage('tidigare.html')">Vinnare</a></li>
                 <li><a href="#" onclick="loadPage('reg.html')">Anmälan</a></li>
@@ -43,9 +43,10 @@
             event.target.classList.add('active');
         }
 
-        // Preload page1.html and set it as active when the page loads
+        // Set "Item 1" as active when the page loads
         window.addEventListener('load', function () {
-            loadPage('info.html');
+            // Preload and load content for "Item 1"
+            loadPage('landing.html');
         });
     </script>
 </body>

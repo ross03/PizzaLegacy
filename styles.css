@@ -1,6 +1,9 @@
+/* Apply red background to all pages */
 body {
     margin: 0;
     padding: 0;
+    background-color: #fc0e0e;
+    color: #ffff00;
 }
 
 .yellow-header {
@@ -8,14 +11,25 @@ body {
     padding: 10px;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px; /* Set the height of the logo */
+    margin-right: 20px; /* Add some spacing between the logo and menu items */
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
+
     margin-right: 10px;
 }
 
@@ -23,14 +37,9 @@ nav a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-}
-
-/* Apply red background to all pages */
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #fc0e0e;
-    color: #ffff00;
+    height: 50px; /* Set the height of the menu items */
+    display: flex;
+    align-items: center;
 }
 
 .image-container {
@@ -52,4 +61,9 @@ body {
 nav a.active {
     color: #fc0e0e; /* Set the color for the active link */
     /* Add any other styles to highlight the active link */
+}
+
+/* Apply red background to all pages */
+#content {
+    padding: 20px; /* Add padding to the content area */
 }
