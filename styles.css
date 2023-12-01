@@ -67,3 +67,9 @@ nav a.active {
 #content {
     padding: 20px; /* Add padding to the content area */
 }
+
+/* Add these styles to set a fixed height for the images in the table */
+table img {
+    height: 200px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
