@@ -42,21 +42,12 @@ nav a {
     align-items: center;
 }
 
-.image-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px; /* Adjust the margin as needed */
-}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
-.image-container a {
-    margin: 0 20px; /* Adjust the space between images */
-}
-
-.image-container img {
-    width: 315px; /* Adjust the width of each image */
-    border-radius: 8px; /* Optional: add border radius for rounded corners */
-    cursor: pointer;
-}
+  }
 
 nav a.active {
     color: #fc0e0e; /* Set the color for the active link */
