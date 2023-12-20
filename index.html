@@ -35,14 +35,14 @@
                     document.getElementById('content').innerHTML = content;
                 });
 
-            // Remove 'active' class from all links
+            //Remove 'active' class from all links
             document.querySelectorAll('nav ul li a').forEach(link => {
-                link.classList.remove('active');
+              link.classList.remove('active');
             });
 
             // Add 'active' class to the clicked link
-            event.target.classList.add('active');
-        }
+           event.target.classList.add('active');
+       }
 
         // Set "Item 1" as active when the page loads
         window.addEventListener('load', function () {
@@ -50,5 +50,6 @@
             loadPage('landing.html');
         });
     </script>
+
 </body>
 </html>
