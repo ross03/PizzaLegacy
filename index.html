@@ -1,55 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="styles/styles.css">
+    <meta name="description" content="Malmö Pizza Legacy - Lokal Legacy-turneringsserie på pizzeria i Malmö">
     <title>Malmö Pizza Legacy</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="yellow-header">
-        <nav>
-            <!-- Image for the landing page, linked to the landing page -->
-            <ul>
-                <li><a href="#" onclick="loadPage('landing.html')" class="active"><img src="images/banner.png" alt="PizzaBanner" class="logo" height="100"></a></li>
-                <li><a href="#" onclick="loadPage('info.html')">Info</a></li>
-                <li><a href="#" onclick="loadPage('tidigare.html')">Vinnare</a></li>
-                <li><a href="#" onclick="loadPage('reg.html')">Anmälan</a></li>
-                <li><a href="#" onclick="loadPage('merc.html')">Merc</a></li>
-            </ul>
-        </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <img src="images/logo.png" alt="Pizza Legacy Logo" class="logo">
+            <nav>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+                <ul class="nav-links">
+                    <li><a href="#hero">Hem</a></li>
+                    <li><a href="#info">Information</a></li>
+                    <li><a href="#winners">Tidigare Vinnare</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div id="content">
-        <!-- The content of the selected page will be loaded here -->
-    </div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <h1>MALMÖ PIZZA LEGACY</h1>
+        <p id="intro-text" class="intro-text">
+            Välkommen till Malmö Pizza Legacy - vår lokala Legacy-turneringsserie på Pizzeria!
+        </p>
 
-    <script>
-            // Function to load a page and set it as active
-        function loadPage(page) {
-            // Use fetch to load the content of the selected page
-            fetch(page)
-                .then(response => response.text())
-                .then(content => {
-                    document.getElementById('content').innerHTML = content;
-                });
+        <!-- Countdown Timer -->
+        <div class="countdown-container">
+            <div class="countdown-title">Nästa turnering om:</div>
+            <div id="countdown">
+                <div class="time-unit">
+                    <span id="days" class="time-value">00</span>
+                    <span class="time-label">Dagar</span>
+                </div>
+                <div class="time-unit">
+                    <span id="hours" class="time-value">00</span>
+                    <span class="time-label">Timmar</span>
+                </div>
+                <div class="time-unit">
+                    <span id="minutes" class="time-value">00</span>
+                    <span class="time-label">Minuter</span>
+                </div>
+                <div class="time-unit">
+                    <span id="seconds" class="time-value">00</span>
+                    <span class="time-label">Sekunder</span>
+                </div>
+            </div>
+            <div id="countdown-message"></div>
+        </div>
 
-            //Remove 'active' class from all links
-            document.querySelectorAll('nav ul li a').forEach(link => {
-              link.classList.remove('active');
-            });
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="mailto:info@pizzalegacy.com" class="social-link">📧 Email</a>
+            <a href="https://twitter.com/pizzalegacy" target="_blank" class="social-link">🐦 Twitter</a>
+            <a href="https://discord.gg/yourserver" target="_blank" class="social-link">💬 Discord</a>
+        </div>
+    </section>
 
-            // Add 'active' class to the clicked link
-           event.target.classList.add('active');
-       }
+    <!-- Info Section -->
+    <section id="info">
+        <h2>Information om Nästa Turnering</h2>
+        <div class="info-content">
+            <div class="info-item">
+                <span class="info-label">📅 När:</span>
+                <span id="event-when" class="info-value">Fredag 18 april 2025, kl 11:30</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">📍 Var:</span>
+                <span id="event-where" class="info-value">Pizzeria Name, Malmö</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">💰 Pris:</span>
+                <span id="event-price" class="info-value">100 kr</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">🏆 Support:</span>
+                <span id="event-support" class="info-value">Top 8 får specialdesignade tokens/kort. Alla deltagare får ett participation promo!</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">✍️ Anmälan:</span>
+                <span id="event-registration" class="info-value">Anmäl dig via Discord eller skicka ett mail till info@pizzalegacy.com</span>
+            </div>
+        </div>
+    </section>
 
-        // Set "Item 1" as active when the page loads
-        window.addEventListener('load', function () {
-            // Preload and load content for "Item 1"
-            loadPage('landing.html');
-        });
-    </script>
+    <!-- Winners Section -->
+    <section id="winners">
+        <h2>Tidigare Vinnare</h2>
+        <div id="winners-grid">
+            <!-- Winners will be loaded dynamically by JavaScript -->
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Malmö Pizza Legacy. All rights reserved.</p>
+    </footer>
+
+    <!-- Load configuration first, then main script -->
+    <script src="config/config.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
