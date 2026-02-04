@@ -16,7 +16,7 @@ const CONFIG = {
     intro: 'En gång per kvartal går Sveriges trevligaste MTG Legacy turnering av stapeln på Pizzeria Rex i Malmö.',
     
     // Details for the info section
-    when: 'Fredag 18 april 2026, kl 11:30',
+    when: 'Lördag 18 april 2026, kl 11:30',
     where: 'Pizzeria Rex, Malmö', // Update with actual pizzeria name
     price: '350 kr om du anmäler dig innan 11 april, annars 400 kr. Det ingår en Pizza i avgiften sen går resten av pengarna tillbaka i priser.',
     support: 'Top 8 får specialdesignade tokens/kort. Alla deltagare får ett participation promo! Top 4 får plocka kort från Pizza Pärmen.',
