@@ -1,4 +1,4 @@
-ag// Main JavaScript for Pizza Legacy website
+// Main JavaScript for Pizza Legacy website
 
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
