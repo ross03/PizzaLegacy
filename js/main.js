@@ -1,4 +1,4 @@
-// Main JavaScript for Pizza Legacy website
+ag// Main JavaScript for Pizza Legacy website
 
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
@@ -97,7 +97,7 @@ function loadWinners() {
       <div class="token-grid">
         <div class="token-card">
           <img src="images/winners/${event.date}-winner.png" alt="Winner Token" onerror="this.parentElement.style.display='none'">
-          <div class="token-label">Winner Token</div>
+          <div class="token-label">Vinnare Token</div>
         </div>
         <div class="token-card">
           <img src="images/winners/${event.date}-top8.png" alt="Top 8 Promo" onerror="this.parentElement.style.display='none'">
@@ -105,10 +105,10 @@ function loadWinners() {
         </div>
         <div class="token-card">
           <img src="images/winners/${event.date}-participation.png" alt="Participation Promo" onerror="this.parentElement.style.display='none'">
-          <div class="token-label">Participation Promo</div>
+          <div class="token-label">Deltagare Promo</div>
         </div>
       </div>
-      ${event.decklistUrl !== '#' ? `<a href="${event.decklistUrl}" target="_blank" class="decklist-link">Se vinnande decklista →</a>` : ''}
+      ${event.decklistUrl !== '#' ? `<a href="${event.decklistUrl}" target="_blank" class="decklist-link">Se vinnande leklista →</a>` : ''}
     `;
     
     winnersGrid.appendChild(eventCard);
